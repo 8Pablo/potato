@@ -12,7 +12,7 @@ import {
   View
 } from 'react-native';
 
-export default class potato extends Component {
+export default class potato2 extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('potato', () => potato);
+AppRegistry.registerComponent('potato2', () => potato2);
