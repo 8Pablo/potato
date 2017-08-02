@@ -1,4 +1,4 @@
-package com.potato;
+package com.potato2;
 
 import android.app.Application;
 
