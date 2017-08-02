@@ -17,7 +17,8 @@ export default class potato2 extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-      Potato welcome!
+
+          Finally working!
         </Text>
         <Text style={styles.instructions}>
           To get started, edit index.android.js
