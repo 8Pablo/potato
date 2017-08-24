@@ -42,7 +42,7 @@ class CandidatesForm extends Component {
       <View>
         <ScrollView style={{alignSelf: 'stretch'}}>
           <Text style={{alignSelf: 'center', paddingTop: 10, color: "#206C97", fontSize: 18}}>
-            Candidate's details
+            Candidates details
           </Text>
           <InputSection title="Surname and Name"
                         placeholder="Kowalski Jan"
