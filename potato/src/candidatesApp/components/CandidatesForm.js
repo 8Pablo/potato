@@ -38,6 +38,8 @@ class CandidatesForm extends Component {
 
 
   render() {
+    const {navigate} = this.props.navigation
+
     return (
       <View>
         <ScrollView style={{alignSelf: 'stretch'}}>
@@ -84,6 +86,8 @@ class CandidatesForm extends Component {
             <Picker.Item label="Screening" value="Screening"/>
             <Picker.Item label="Rejected" value="Rejected"/>
           </Picker>
+          <Button title="Save / Add"
+                  onPress={() => navigate('CandidatesList')}/>
         </ScrollView>
       </View>
     )

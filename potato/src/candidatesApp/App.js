@@ -11,11 +11,15 @@ import RegisterForm from './components/RegisterForm';
 import CandidatesForm from './components/CandidatesForm'
 import {StackNavigator} from 'react-navigation'
 import CandidatesList from './components/CandidatesList'
+import CandidatesListTrial from './components/CandidatesListTrial'
+import CandidatesFormREDUX from './components/CandidatesFormREDUX'
 
 const BasicApp = StackNavigator({
+  Register: {screen: RegisterForm},
+  CandidatesListTrial: {screen: CandidatesListTrial},
+  CandidatesFormREDUX: {screen: CandidatesFormREDUX},
   CandidatesList: {screen: CandidatesList},
   CandidatesForm: {screen: CandidatesForm},
-  Register: {screen: RegisterForm},
 });
 
 class App extends Component {

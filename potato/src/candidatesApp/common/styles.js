@@ -1,6 +1,3 @@
-/**
- * Created by Lena on 21.08.2017.
- */
 const React = require('react-native')
 const {StyleSheet} = React
 const constants = {
@@ -69,4 +66,6 @@ var styles = StyleSheet.create({
 })
 
 module.exports = styles
-module.exports.constants = constants;
+module.exports.constants = constants;/**
+ * Created by Lena on 26.08.2017.
+ */

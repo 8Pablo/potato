@@ -17,6 +17,7 @@ class CandidatesList extends Component {
 
   render() {
     const {navigate} = this.props.navigation;
+
     return (
       <View>
         <Text>Candidate 1</Text>

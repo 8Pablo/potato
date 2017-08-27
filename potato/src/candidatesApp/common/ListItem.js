@@ -3,7 +3,7 @@
  */
 import React, {Component} from 'react';
 import ReactNative from 'react-native';
-const styles = require('../styles/styles')
+const styles = require('./styles')
 const { View, TouchableHighlight, Text } = ReactNative;
 
 class ListItem extends Component {
