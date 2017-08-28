@@ -29,7 +29,7 @@ export const passwordChanged = (text) => {
 }
 
 function navigateToNextPage(navigate) {
-  navigate('CandidatesListTrial')
+  navigate('CandidatesList')
 }
 
 export const loginUser = ({email, password, navigate}) => {

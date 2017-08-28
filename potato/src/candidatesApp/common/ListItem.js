@@ -9,13 +9,13 @@ import {Text, View} from 'react-native';
 class ListItem extends Component {
 
   render() {
-    const {name} = this.props.candidate;
+    const {name, status, level, salary} = this.props.candidate;
 
     return (
         <View>
           <View style={styles.containerStyle}>
             <Text style={styles.titleStyle}>
-              {name}
+              {name}, {status}, {level}, {salary}
             </Text>
           </View>
         </View>
