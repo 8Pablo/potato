@@ -54,7 +54,7 @@ class CandidatesList extends Component {
           dataSource={this.dataSource}
           renderRow={this.renderRow}
         />
-        <View style={{margin: 10, flex: 1}}>
+        <View style={{margin: 10}}>
           <Button title="Add new Candidate"
                   onPress={() => navigate('CandidatesForm')}/>
         </View>

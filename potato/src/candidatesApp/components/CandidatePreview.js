@@ -2,8 +2,8 @@
  * Created by Lena on 28.08.2017.
  */
 import React, {Component} from 'react';
-import {Text, View, ScrollView, TextInput, Button} from 'react-native';
-import {InputSection2} from '../common';
+import {Text, View, ScrollView, Button} from 'react-native';
+import {PreviewText, PreviewHyperlink} from '../common';
 import {connect} from 'react-redux';
 import {candidateUpdate, candidateCreate} from '../actions'
 
@@ -30,107 +30,89 @@ class CandidatesPreview extends Component {
           <Text style={{alignSelf: 'center', paddingTop: 10, color: "#206C97", fontSize: 18}}>
             Candidate's details
           </Text>
-          <InputSection2 title="Surname and Name"
-                         placeholder="Kowalski Jan"
-                         value={this.props.name}
-                         onChangeText={text => this.props.candidateUpdate({prop: 'name', value: text})}
+          <PreviewText title="Surname and Name"
+                       value="Kowalski Jan"
           />
-          <InputSection2 title="Email"
-                         placeholder="example@mail.com"
-                         value={this.props.email}
-                         onChangeText={text => this.props.candidateUpdate({prop: 'email', value: text})}
+          <PreviewText title="Email"
+                       placeholder="example@mail.com"
+                       value={this.props.email}
+                       onChangeText={text => this.props.candidateUpdate({prop: 'email', value: text})}
           />
-          <InputSection2 title="Education"
-                         placeholder="Education"
-                         value={this.props.education}
-                         onChangeText={text => this.props.candidateUpdate({prop: 'education', value: text})}
+          <PreviewText title="Education"
+                       placeholder="Education"
+                       value={this.props.education}
+                       onChangeText={text => this.props.candidateUpdate({prop: 'education', value: text})}
           />
-          <InputSection2 title="Level"
-                         placeholder="Junior"
-                         value={this.props.level}
-                         onChangeText={text => this.props.candidateUpdate({prop: 'level', value: text})}
+          <PreviewText title="Level"
+                       placeholder="Junior"
+                       value={this.props.level}
+                       onChangeText={text => this.props.candidateUpdate({prop: 'level', value: text})}
           />
-          <InputSection2 title="Years in JS"
-                         placeholder="0-1"
-                         value={this.props.jsyears}
-                         onChangeText={text => this.props.candidateUpdate({prop: 'jsyears', value: text})}
+          <PreviewText title="Years in JS"
+                       placeholder="0-1"
+                       value={this.props.jsyears}
+                       onChangeText={text => this.props.candidateUpdate({prop: 'jsyears', value: text})}
           />
-          <InputSection2 title="Years in Front-End"
-                         placeholder="0-1"
-                         value={this.props.feyears}
-                         onChangeText={text => this.props.candidateUpdate({prop: 'feyears', value: text})}
+          <PreviewText title="Years in Front-End"
+                       placeholder="0-1"
+                       value={this.props.feyears}
+                       onChangeText={text => this.props.candidateUpdate({prop: 'feyears', value: text})}
           />
-          <InputSection2 title="Github Link"
-                         placeholder="https://github.com"
-                         value={this.props.ghlink}
-                         onChangeText={text => this.props.candidateUpdate({prop: 'ghlink', value: text})}
+          <PreviewHyperlink title="Github Link"
+                       value="https://github.com"
+                       onChangeText={text => this.props.candidateUpdate({prop: 'ghlink', value: text})}
           />
-          <InputSection2 title="Skills"
-                         placeholder="Candidate's skills"
-                         value={this.props.skills}
-                         onChangeText={text => this.props.candidateUpdate({prop: 'skills', value: text})}
+          <PreviewText title="Skills"
+                       placeholder="Candidate's skills"
+                       value={this.props.skills}
+                       onChangeText={text => this.props.candidateUpdate({prop: 'skills', value: text})}
           />
-          <InputSection2 title="Project Description"
-                         placeholder="Description"
-                         value={this.props.project}
-                         onChangeText={text => this.props.candidateUpdate({prop: 'project', value: text})}
+          <PreviewText title="Project Description"
+                       placeholder="Description"
+                       value={this.props.project}
+                       onChangeText={text => this.props.candidateUpdate({prop: 'project', value: text})}
           />
-          <InputSection2 title="Notice"
-                         placeholder="2 weeks"
-                         value={this.props.notice}
-                         onChangeText={text => this.props.candidateUpdate({prop: 'notice', value: text})}
+          <PreviewText title="Notice"
+                       placeholder="2 weeks"
+                       value={this.props.notice}
+                       onChangeText={text => this.props.candidateUpdate({prop: 'notice', value: text})}
           />
-          <InputSection2 title="Timezone"
-                         placeholder="UTC"
-                         value={this.props.zone}
-                         onChangeText={text => this.props.candidateUpdate({prop: 'zone', value: text})}
+          <PreviewText title="Timezone"
+                       placeholder="UTC"
+                       value={this.props.zone}
+                       onChangeText={text => this.props.candidateUpdate({prop: 'zone', value: text})}
           />
-          <InputSection2 title="Based in"
-                         placeholder="San Francisco"
-                         value={this.props.based}
-                         onChangeText={text => this.props.candidateUpdate({prop: 'based', value: text})}
+          <PreviewText title="Based in"
+                       placeholder="San Francisco"
+                       value={this.props.based}
+                       onChangeText={text => this.props.candidateUpdate({prop: 'based', value: text})}
           />
-          <InputSection2 title="Current Position"
-                         placeholder="Programmer"
-                         value={this.props.current}
-                         onChangeText={text => this.props.candidateUpdate({prop: 'current', value: text})}
+          <PreviewText title="Current Position"
+                       placeholder="Programmer"
+                       value={this.props.current}
+                       onChangeText={text => this.props.candidateUpdate({prop: 'current', value: text})}
           />
-          <InputSection2 title="Salary Expectation"
-                         placeholder="10,000.00 EUR"
-                         value={this.props.salary}
-                         onChangeText={text => this.props.candidateUpdate({prop: 'salary', value: text})}
+          <PreviewText title="Salary Expectation"
+                       placeholder="10,000.00 EUR"
+                       value={this.props.salary}
+                       onChangeText={text => this.props.candidateUpdate({prop: 'salary', value: text})}
           />
-          <InputSection2 title="How got to know Aurity?"
-                         placeholder="Google"
-                         value={this.props.whereaurity}
-                         onChangeText={text => this.props.candidateUpdate({prop: 'whereaurity', value: text})}
+          <PreviewText title="How got to know Aurity?"
+                       placeholder="Google"
+                       value={this.props.whereaurity}
+                       onChangeText={text => this.props.candidateUpdate({prop: 'whereaurity', value: text})}
           />
-          <InputSection2 title="Online Courses"
-                         placeholder="udemy"
-                         value={this.props.courses}
-                         onChangeText={text => this.props.candidateUpdate({prop: 'courses', value: text})}
+          <PreviewText title="Online Courses"
+                       placeholder="udemy"
+                       value={this.props.courses}
+                       onChangeText={text => this.props.candidateUpdate({prop: 'courses', value: text})}
           />
-          <View style={styles.viewStyle}>
-            <Text style={styles.textStyle}>Details</Text>
-            < TextInput placeholder="Details or additional notes"
-                        style={{
-                          color          : '#1d1d1d',
-                          paddingRight   : 5,
-                          paddingLeft    : 5,
-                          fontSize       : 18,
-                          lineHeight     : 23,
-                          height         : 200,
-                          alignSelf      : 'stretch',
-                          backgroundColor: '#fff',
-                          elevation      : 10
-                        }}
-                        underlineColorAndroid='rgba(0,0,0,0)'
-                        multiline={true}
-                        autoCorrect={false}
-                        value={this.props.details}
-                        onChangeText={text => this.props.candidateUpdate({prop: 'details', value: text})}
-            />
-          </View>
+          <PreviewText title="Details"
+                       placeholder="Details"
+                       value={this.props.details}
+                       onChangeText={text => this.props.candidateUpdate({prop: 'details', value: text})}
+          />
+
 
           <View style={{flexDirection: 'row', justifyContent: 'space-between', flex: 1}}>
             <View style={{flex: 1, margin: 10}}>

@@ -16,17 +16,16 @@ const PreviewHyperlink = ({value, title}) => {
   const {detailStyle, titleStyle} = styles;
   return (
     <View style={{
+      flex: 1,
       flexDirection: 'row',
-      alignItems: 'flex-start',
       alignSelf : 'stretch',
       marginLeft: 15,
       marginRight: 15,
-      marginBottom: 15
+      margin: 10
     }}>
       <Text style={titleStyle}>{title}</Text>
-      <Hyperlink>
-        <Text         style={detailStyle}
-                      value={value}/>
+      <Hyperlink linkDefault={true}>
+        <Text  style={detailStyle}>{value}</Text>
       </Hyperlink>
     </View>
   );
@@ -34,13 +33,12 @@ const PreviewHyperlink = ({value, title}) => {
 
 const styles = {
   detailStyle    : {
-    color       : '#1d1d1d',
     paddingRight: 5,
     paddingLeft : 5,
     fontSize    : 18,
     lineHeight  : 23,
-    flex: 3,
-    elevation: 10
+    flex: 1.5,
+    alignSelf: 'center'
   },
   titleStyle    : {
     color       : '#3c3c3c',
@@ -48,8 +46,9 @@ const styles = {
     lineHeight  : 23,
     flex: 1,
     alignSelf: 'center',
-    fontWeight: 3,
+    fontWeight: 'bold',
   }
 };
+
 
 export {PreviewHyperlink};

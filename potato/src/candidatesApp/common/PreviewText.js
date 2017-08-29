@@ -12,18 +12,17 @@ const PreviewText = ({value, title}) => {
   const {detailStyle, titleStyle} = styles;
   return (
     <View style={{
+      flex: 1,
       flexDirection: 'row',
+      justifyContent: 'space-between',
       alignItems: 'flex-start',
       alignSelf : 'stretch',
       marginLeft: 15,
       marginRight: 15,
-      marginBottom: 15
+      margin: 10
     }}>
-      <Text style={titleStyle}>{title}</Text>
-      <Text
-        style={detailStyle}
-        value={value}
-      />
+      <Text style={titleStyle}>{title}: </Text>
+      <Text style={detailStyle}>{value}</Text>
     </View>
   );
 };
@@ -35,8 +34,9 @@ const styles = {
     paddingLeft : 5,
     fontSize    : 18,
     lineHeight  : 23,
-    flex: 3,
-    elevation: 10
+    flex: 1.5,
+    elevation: 10,
+    alignSelf: 'center'
   },
   titleStyle    : {
     color       : '#3c3c3c',
@@ -44,7 +44,7 @@ const styles = {
     lineHeight  : 23,
     flex: 1,
     alignSelf: 'center',
-    fontWeight: 3,
+    fontWeight: 'bold',
   }
 };
 

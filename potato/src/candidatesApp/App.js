@@ -13,6 +13,7 @@ import CandidatesList from './components/CandidatesList'
 import CandidatesForm from './components/CandidatesForm'
 import CandidatePreview from './components/CandidatePreview'
 
+
 const BasicApp = StackNavigator({
   CandidatePreview: {screen: CandidatePreview},
   Register      : {screen: RegisterForm},
