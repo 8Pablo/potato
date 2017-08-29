@@ -20,7 +20,7 @@ INITIAL_STATE = {
   whereaurity: '',
   courses: '',
   details: '',
-  status: '',
+  status: 'New',
   education: '',
 };
 

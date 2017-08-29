@@ -15,7 +15,8 @@ class CandidatesList extends Component {
     const {navigate} = navigation;
 
     return {
-      title      : <Text style={{alignSelf: 'center', color: "#206C97", fontWeight: 'normal'}}>List of Candidates</Text>,
+      title      : <Text style={{alignSelf: 'center', color: "#206C97", fontWeight: 'normal'}}>List of
+        Candidates</Text>,
       headerRight: (<Button title="Add New Candidate"
                             onPress={() => navigate('CandidatesForm')}/>),
       headerLeft : null
@@ -40,7 +41,7 @@ class CandidatesList extends Component {
   }
 
   renderRow(candidate) {
-    return <ListItem candidate={candidate} />;
+    return <ListItem candidate={candidate}/>;
   }
 
   render() {
@@ -53,8 +54,10 @@ class CandidatesList extends Component {
           dataSource={this.dataSource}
           renderRow={this.renderRow}
         />
-        <Button title="Add new Candidate"
-                onPress={() => navigate('CandidatesForm')}/>
+        <View style={{margin: 10, flex: 1}}>
+          <Button title="Add new Candidate"
+                  onPress={() => navigate('CandidatesForm')}/>
+        </View>
       </View>
     )
   }

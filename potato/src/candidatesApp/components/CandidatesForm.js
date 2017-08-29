@@ -8,7 +8,7 @@
  * Created by Lena on 18.08.2017.
  */
 import React, {Component} from 'react';
-import {Text, View, ScrollView, Button, TextInput, Picker} from 'react-native';
+import {Text, View, ScrollView, Button, TextInput} from 'react-native';
 import {InputSection} from '../common';
 import {connect} from 'react-redux';
 import {candidateUpdate, candidateCreate} from '../actions'
@@ -72,7 +72,6 @@ class CandidatesForm extends Component {
   }
 
   render() {
-    const {navigate} = this.props.navigation
 
     return (
       <View>
@@ -181,18 +180,12 @@ class CandidatesForm extends Component {
                         onChangeText={text => this.props.candidateUpdate({prop: 'details', value: text})}
             />
           </View>
-          <View style={styles.viewStyle}>
-            <Text style={styles.textStyle}>Status</Text>
-          </View>
-          <Picker style={{flex: 1, marginLeft: 15, marginRight: 15}}
-                  selectedValue={this.props.status}
-                  onValueChange={stat => this.props.candidateUpdate({prop: 'status', value: stat})}>
-            <Picker.Item label="Screening" value="Screening"/>
-            <Picker.Item label="Rejected" value="Rejected"/>
-          </Picker>
 
-          <Button title="Save / Add"
-                  onPress={this.onButtonPress.bind(this)}/>
+          <View style={{margin: 10, flex: 1}}>
+            <Button title="Save / Add"
+                    onPress={this.onButtonPress.bind(this)}
+                    color="#206C97"/>
+          </View>
 
         </ScrollView>
       </View>
