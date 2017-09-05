@@ -47,13 +47,15 @@ class CandidatesList extends Component {
   //  const {navigate} = this.props;
   //  this.props.candidatePreviewNavigate({navigate});
   //}
-  onCandidatePress() {
-    const {navigate} = this.props;
 
-    this.props.candidatePreviewNavigate({navigate});
-  }
+  renderRow(candidate, navigation) {
 
-  renderRow(candidate) {
+    onCandidatePress = () => {
+      const {navigate} = navigation;
+
+      this.props.candidatePreviewNavigate({navigate});
+    }
+
     return <ListItemRedux onPress={this.onCandidatePress}
                           candidate={candidate}/>;
   }

@@ -12,10 +12,10 @@ class ListItemRedux extends Component {
 
   render() {
     const {name, status, level, salary} = this.props.candidate
-    const {onPress} = this.props
+
 
     return (
-      <TouchableWithoutFeedback onPress={onPress}>
+      <TouchableWithoutFeedback onPress={this.props.onPress}>
         <View>
           <View style={styles.containerStyle}>
             <Text style={styles.titleStyle}>

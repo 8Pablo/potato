@@ -1,7 +1,7 @@
 /**
  * Created by Lena on 18.08.2017.
  */
-import {CANDIDATE_UPDATE, CANDIDATES_FETCH_SUCCESS, CANDIDATE_CREATE, CANDIDATE_SAVE_SUCCESS} from './types'
+import {CANDIDATE_UPDATE, CANDIDATES_FETCH_SUCCESS, CANDIDATE_CREATE, CANDIDATE_SAVE_SUCCESS, CANDIDATE_PREVIEW_NAVIGATE} from './types'
 import firebase from 'firebase';
 
 export const candidateUpdate = ({prop, value}) => {
@@ -91,8 +91,13 @@ function navigateToNextPage(navigate) {
   navigate('CandidatesPreview')
 }
 
-export const candidatePreviewNavigate = (navigate) => {
+export const candidatePreviewNavigate = (dispatch, navigate) => {
+  dispatch({
+    type   : CANDIDATE_PREVIEW_NAVIGATE,
+  })
+
   console.log('action!')
+
   navigateToNextPage(navigate)
 }
 
