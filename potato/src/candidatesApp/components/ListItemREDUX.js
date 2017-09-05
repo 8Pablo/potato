@@ -4,15 +4,17 @@
 /**
  * Created by Lena on 21.08.2017.
  */
-import React from 'React';
+import React, {Component} from 'React';
 import {Text, View, TouchableWithoutFeedback} from 'react-native'
 
 
-const ListItemRedux = (onPress, candidate) => {
-  const {name, status, level, salary} = candidate
+class ListItemRedux extends Component {
 
-   return (
-      <TouchableWithoutFeedback onPress={onPress}>
+  render() {
+    const {name, status, level, salary, uid} = this.props.candidate
+
+    return (
+      <TouchableWithoutFeedback onPress={() => console.log({uid})}>
         <View>
           <View style={styles.containerStyle}>
             <Text style={styles.titleStyle}>
@@ -22,6 +24,7 @@ const ListItemRedux = (onPress, candidate) => {
         </View>
       </TouchableWithoutFeedback>
     );
+  }
 }
 
 const styles = {
@@ -44,4 +47,4 @@ const styles = {
   }
 }
 
-export {ListItemRedux};
+export default ListItemRedux;

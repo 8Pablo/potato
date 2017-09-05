@@ -6,9 +6,10 @@ import _ from 'lodash';
 import {Text, View, Button, ListView} from 'react-native';
 import {connect} from 'react-redux';
 import {candidatesFetch, candidatePreviewNavigate} from '../actions';
-import {ListItem} from '../common'
-//import {ListItemRedux} from './ListItemREDUX'
+//import {ListItem} from '../common'
+import ListItemRedux from './ListItemREDUX'
 //import {ListItemConst} from './ListItemConst'
+//import ListItem from './ListItem'
 
 
 class CandidatesList extends Component {
@@ -46,10 +47,15 @@ class CandidatesList extends Component {
   //  const {navigate} = this.props;
   //  this.props.candidatePreviewNavigate({navigate});
   //}
+  onCandidatePress() {
+    const {navigate} = this.props;
 
-  renderRow(candidate, navigation) {
-    return <ListItem navigation={navigation}
-                     candidate={candidate}/>;
+    this.props.candidatePreviewNavigate({navigate});
+  }
+
+  renderRow(candidate) {
+    return <ListItemRedux onPress={this.onCandidatePress}
+                          candidate={candidate}/>;
   }
 
   render() {

@@ -16,8 +16,8 @@ import ListItem from './common'
 
 
 const BasicApp = StackNavigator({
-  Register      : {screen: RegisterForm},
   CandidatePreview: {screen: CandidatePreview},
+  Register      : {screen: RegisterForm},
   CandidatesList: {screen: CandidatesList},
   CandidatesForm: {screen: CandidatesForm},
 });
