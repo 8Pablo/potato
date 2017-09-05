@@ -11,10 +11,11 @@ import {Text, View, TouchableWithoutFeedback} from 'react-native'
 class ListItemRedux extends Component {
 
   render() {
-    const {name, status, level, salary, uid} = this.props.candidate
+    const {name, status, level, salary} = this.props.candidate
+    const {onPress} = this.props
 
     return (
-      <TouchableWithoutFeedback onPress={() => console.log({uid})}>
+      <TouchableWithoutFeedback onPress={onPress}>
         <View>
           <View style={styles.containerStyle}>
             <Text style={styles.titleStyle}>

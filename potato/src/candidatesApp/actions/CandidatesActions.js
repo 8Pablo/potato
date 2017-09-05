@@ -92,6 +92,7 @@ function navigateToNextPage(navigate) {
 }
 
 export const candidatePreviewNavigate = (navigate) => {
+  console.log('action!')
   navigateToNextPage(navigate)
 }
 
