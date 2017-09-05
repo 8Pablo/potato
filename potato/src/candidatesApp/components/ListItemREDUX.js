@@ -1,19 +1,18 @@
 /**
+ * Created by Lena on 04.09.2017.
+ */
+/**
  * Created by Lena on 21.08.2017.
  */
-import React, {Component} from 'React';
+import React from 'React';
 import {Text, View, TouchableWithoutFeedback} from 'react-native'
 
 
-class ListItem extends Component {
+const ListItemRedux = (onPress, candidate) => {
+  const {name, status, level, salary} = candidate
 
-
-  render() {
-    const {name, status, level, salary} = this.props.candidate;
-    const {navigate} = this.props.navigation
-
-    return (
-      <TouchableWithoutFeedback onPress={() => navigate('CandidatePreview')}>
+   return (
+      <TouchableWithoutFeedback onPress={onPress}>
         <View>
           <View style={styles.containerStyle}>
             <Text style={styles.titleStyle}>
@@ -23,7 +22,6 @@ class ListItem extends Component {
         </View>
       </TouchableWithoutFeedback>
     );
-  }
 }
 
 const styles = {
@@ -46,10 +44,4 @@ const styles = {
   }
 }
 
-
-ListItem.propTypes = {
-  navigation: React.PropTypes.func.isRequired
-}
-
-
-export {ListItem};
+export {ListItemRedux};

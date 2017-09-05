@@ -5,12 +5,10 @@ import React, {Component} from 'React';
 import {Text, View, TouchableWithoutFeedback} from 'react-native'
 
 
-class ListItem extends Component {
+const ListItemConst = (candidate, navigation) => {
 
-
-  render() {
-    const {name, status, level, salary} = this.props.candidate;
-    const {navigate} = this.props.navigation
+    const {name, status, level, salary} = candidate;
+    const {navigate} = navigation
 
     return (
       <TouchableWithoutFeedback onPress={() => navigate('CandidatePreview')}>
@@ -23,7 +21,6 @@ class ListItem extends Component {
         </View>
       </TouchableWithoutFeedback>
     );
-  }
 }
 
 const styles = {
@@ -47,9 +44,4 @@ const styles = {
 }
 
 
-ListItem.propTypes = {
-  navigation: React.PropTypes.func.isRequired
-}
-
-
-export {ListItem};
+export {ListItemConst};

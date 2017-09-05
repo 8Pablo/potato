@@ -1,7 +1,7 @@
 /**
  * Created by Lena on 18.08.2017.
  */
-import {CANDIDATE_UPDATE, CANDIDATE_CREATE, CANDIDATE_SAVE_SUCCESS} from '../actions/types'
+import {CANDIDATE_UPDATE, CANDIDATE_CREATE, CANDIDATE_SAVE_SUCCESS, CANDIDATE_PREVIEW_NAVIGATE} from '../actions/types'
 
 INITIAL_STATE = {
   name: '',
@@ -32,6 +32,8 @@ export default (state = INITIAL_STATE, action) => {
       return INITIAL_STATE;
     case CANDIDATE_SAVE_SUCCESS:
       return INITIAL_STATE;
+    case CANDIDATE_PREVIEW_NAVIGATE:
+      return INITIAL_STATE
     default:
       return state;
   }

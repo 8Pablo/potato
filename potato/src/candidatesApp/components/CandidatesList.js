@@ -5,8 +5,10 @@ import React, {Component} from 'react';
 import _ from 'lodash';
 import {Text, View, Button, ListView} from 'react-native';
 import {connect} from 'react-redux';
-import {candidatesFetch} from '../actions';
+import {candidatesFetch, candidatePreviewNavigate} from '../actions';
 import {ListItem} from '../common'
+//import {ListItemRedux} from './ListItemREDUX'
+//import {ListItemConst} from './ListItemConst'
 
 
 class CandidatesList extends Component {
@@ -40,8 +42,14 @@ class CandidatesList extends Component {
     this.dataSource = ds.cloneWithRows(candidates)
   }
 
-  renderRow(candidate) {
-    return <ListItem candidate={candidate}/>;
+  //onListedItemPress() {
+  //  const {navigate} = this.props;
+  //  this.props.candidatePreviewNavigate({navigate});
+  //}
+
+  renderRow(candidate, navigation) {
+    return <ListItem navigation={navigation}
+                     candidate={candidate}/>;
   }
 
   render() {
@@ -65,15 +73,16 @@ class CandidatesList extends Component {
 
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, props) => {
   const candidates = _.map(state.fetch, (val, uid) => {
     return {...val, uid};
   });
+  const {navigate} = props.navigation
 
-  return {candidates};
+  return {candidates, navigate};
 }
 
-export default connect(mapStateToProps, {candidatesFetch})(CandidatesList)
+export default connect(mapStateToProps, {candidatesFetch, candidatePreviewNavigate})(CandidatesList)
 
 
 //OLD CODE WITH STATE

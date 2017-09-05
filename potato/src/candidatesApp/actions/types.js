@@ -15,3 +15,4 @@ export const CANDIDATE_UPDATE = 'candidate_update'
 export const CANDIDATE_CREATE = 'candidate_create';
 export const CANDIDATES_FETCH_SUCCESS = 'candidate_fetch_success';
 export const CANDIDATE_SAVE_SUCCESS = 'candidate_save_success';
+export const CANDIDATE_PREVIEW_NAVIGATE = 'candidate_preview_navigate'

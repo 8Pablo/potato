@@ -87,4 +87,12 @@ export const candidateSave = ({name, email, details, status}) => {
   }
 }
 
+function navigateToNextPage(navigate) {
+  navigate('CandidatesPreview')
+}
+
+export const candidatePreviewNavigate = (navigate) => {
+  navigateToNextPage(navigate)
+}
+
 

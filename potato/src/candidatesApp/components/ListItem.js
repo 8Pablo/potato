@@ -3,18 +3,19 @@
  */
 import React, {Component} from 'React';
 import {Text, View, TouchableWithoutFeedback} from 'react-native';
-import {NavigationActions} from 'react-navigation'
+
+
 
 class ListItem extends Component {
+  onRowPress() {
+    this.props.navigation.navigate('CandidatePreview')
+  }
 
   render() {
     const {name, status, level, salary} = this.props.candidate;
-    const {navigateAction} = NavigationActions.navigate({
-      routeName: 'CandidatePreview'
-    })
 
     return (
-      <TouchableWithoutFeedback onPress={() => this.props.navigation.dispatch(navigateAction)}>
+      <TouchableWithoutFeedback onPress={this.onRowPress.bind(this)}>
         <View>
           <View style={styles.containerStyle}>
             <Text style={styles.titleStyle}>
@@ -46,4 +47,5 @@ const styles = {
     position       : 'relative',
   }
 }
+
 export default ListItem;
