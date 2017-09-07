@@ -3,13 +3,10 @@ import _ from 'lodash';
 import {Text, View, Button, ListView} from 'react-native';
 import {connect} from 'react-redux';
 import {candidatesFetch} from '../actions/CandidatesActions';
-
 import ListItem from './ListItem'
 
 
 class CandidatesList extends Component {
-
-  //var navi = {};
 
   constructor(props) {
 
@@ -17,12 +14,8 @@ class CandidatesList extends Component {
     //console.log("The porpsddoo are",this.props);
   }
 
-  static navigationOptions = ({navigation},props) => {
+  static navigationOptions = ({navigation}) => {
     const {navigate} = navigation;
-    //navi = navigate
-    console.log("This naviate is" , navigation);
-    //console.log("The porpsddoo are",props);
-
 
     return {
       title      : <Text style={{alignSelf: 'center', color: "#206C97", fontWeight: 'normal'}}>List ofh
@@ -58,9 +51,6 @@ class CandidatesList extends Component {
   //}
 
 
-
-
-
   // renderRow(candidate, navigate) {
   //
   //   return <ListItemRedux onPress={()=>{onCandidatePress()}} candidate={candidate}/>;
@@ -68,9 +58,6 @@ class CandidatesList extends Component {
 
   render() {
 
-    // yes i put render row inside component
-    // I then accessed the onCandidatePress also
-    // no
     const {navigate} = this.props.navigation;
     console.log("The render props includek",navigate);
     //console.log("This is render navigate", this.props);
@@ -87,7 +74,7 @@ class CandidatesList extends Component {
           enableEmptySections
           dataSource={this.dataSource}
           renderRow={
-            (candidate, navigate)=> <ListItem onPress={onCandidatePress()} candidate={candidate}/>
+            (candidate, navigate)=> <ListItem onPress={onCandidatePress} candidate={candidate}/>
 
           }
         />

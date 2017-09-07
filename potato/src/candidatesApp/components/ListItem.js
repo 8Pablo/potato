@@ -7,15 +7,12 @@ import {Text, View, TouchableWithoutFeedback} from 'react-native';
 
 
 class ListItem extends Component {
-  onRowPress() {
-    this.props.navigation.navigate('CandidatePreview')
-  }
 
   render() {
     const {name, status, level, salary} = this.props.candidate;
 
     return (
-      <TouchableWithoutFeedback onPress={this.onRowPress.bind(this)}>
+      <TouchableWithoutFeedback onPress={this.props.onPress}>
         <View>
           <View style={styles.containerStyle}>
             <Text style={styles.titleStyle}>
