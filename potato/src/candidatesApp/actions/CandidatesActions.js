@@ -91,12 +91,7 @@ function navigateToNextPage(navigate) {
   navigate('CandidatesPreview')
 }
 
-export const candidatePreviewNavigate = (dispatch, navigate) => {
-  dispatch({
-    type   : CANDIDATE_PREVIEW_NAVIGATE,
-  })
-
-  console.log('action!')
+export const candidatePreviewNavigate = (navigate) => {
 
   navigateToNextPage(navigate)
 }
