@@ -13,8 +13,7 @@ class CandidatesPreview extends Component {
     const {navigate} = navigation;
 
     return {
-      title      : <Text style={{alignSelf: 'center', color: "#206C97", fontWeight: 'normal'}}>Preview Existing
-        Candidate</Text>,
+      title      : <Text style={{alignSelf: 'center', color: "#206C97", fontWeight: 'normal'}}>Preview Existing Candidate</Text>,
       headerRight: (<Button title="Save/Add"
                             onPress={() => navigate('CandidatesList')}/>),
       headerLeft : (<Button title="Back"
@@ -23,6 +22,8 @@ class CandidatesPreview extends Component {
   }
 
   render() {
+    const {name} = this.props.navigation.state.params.candidate
+    console.log({name})
 
     return (
       <View>
@@ -59,8 +60,8 @@ class CandidatesPreview extends Component {
                        onChangeText={text => this.props.candidateUpdate({prop: 'feyears', value: text})}
           />
           <PreviewHyperlink title="Github Link"
-                       value="https://github.com"
-                       onChangeText={text => this.props.candidateUpdate({prop: 'ghlink', value: text})}
+                            value="https://github.com"
+                            onChangeText={text => this.props.candidateUpdate({prop: 'ghlink', value: text})}
           />
           <PreviewText title="Skills"
                        placeholder="Candidate's skills"

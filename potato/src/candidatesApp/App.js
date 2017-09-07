@@ -12,12 +12,11 @@ import {StackNavigator} from 'react-navigation'
 import CandidatesList from './components/CandidatesList'
 import CandidatesForm from './components/CandidatesForm'
 import CandidatePreview from './components/CandidatePreview'
-import ListItem from './common'
 
 
 const BasicApp = StackNavigator({
-  CandidatePreview: {screen: CandidatePreview},
   Register      : {screen: RegisterForm},
+  CandidatePreview: {screen: CandidatePreview},
   CandidatesList: {screen: CandidatesList},
   CandidatesForm: {screen: CandidatesForm},
 });
